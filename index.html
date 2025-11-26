@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Glossary Project</title>
+    <style>
+        /* Modern Reset & Base Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+
+        /* The Grid Layout */
+        .glossary-grid {
+            display: grid;
+            /* Creates a responsive grid: fit as many columns as possible, min width 280px */
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* The Card Design */
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Ensures image covers area without stretching */
+            background-color: #e0e0e0;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .word-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db; /* Accent color line */
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .example-sentence {
+            font-style: italic;
+            color: #555;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Technical Glossary</h1>
+        <p>Information Systems • 2nd Semester • Class 2025</p>
+    </header>
+
+    <div class="glossary-grid" id="glossary-container">
+        
+        <article class="card">
+            <img src="images/ia.jpg" alt="Artificial Inteligence" class="card-image">
+            <div class="card-content">
+                <h2 class="word-title">Artificial Inteligence</h2>
+                <p class="example-sentence">"In our lab, we use a digital < strong>artificial inteligence</strong> to capture images of the samples for analysis."</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="images/Algorithms.jpg" alt="Algorithm" class="card-image">
+            <div class="card-content">
+                <h2 class="word-title">Algorithm</h2>
+                <p class="example-sentence">"We developed a sorting <strong>algorithm</strong> to organize the data more efficiently."</p>
+            </div>
+        </article>
+
+        </div>
+
+    <footer>
+        <p>Created by [Your Name] using HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
